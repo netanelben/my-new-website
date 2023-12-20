@@ -91,8 +91,8 @@ Been working with the IoT department developing app to control and monitor versa
   {
     date: 2015,
     title: 'Midburn (Regional burning-man)',
-    content: `I have actively volunteered my expertise to enhance various open-source applications, utilizing a tech stack that encompasses RoR (Ruby on Rails), NodeJS, MySQL, and prominent client-side frameworks such as AngularJS and React. My contributions have helped improve the functionality and usability of these projects while collaborating with a local community of developers.`,
-    link: 'https://www.midburn.org/',
+    content: `I have actively volunteered my expertise to enhance various open-source applications, utilizing a tech stack that encompasses RoR (Ruby on Rails), NodeJS, MySQL, and prominent client-side frameworks such as AngularJS and React. My contributions have helped improve the functionality and usability of these projects while collaborating with a local community of developers. https://www.midburn.org/`,
+    link: 'https://github.com/Midburn/spark',
     icon: 'community'
   }
 ] satisfies TimelineItemProps[]
