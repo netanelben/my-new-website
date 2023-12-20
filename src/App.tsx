@@ -12,7 +12,9 @@ One Simple API  | Owl Protocol is a multichain NFT marketplace and launchpad for
 Building Blockchain explorer and various of UI components.
 `,
     link: 'https://owlprotocol.xyz/',
-    icon: 'blockchain'
+    icon: 'blockchain',
+    imageSrc:
+      'https://firebasestorage.googleapis.com/v0/b/hapyspace-assets.appspot.com/o/Owl%20Protocol%20Examples.png?alt=media&token=6e9509fa-2bc0-44a0-9550-8b2609cece8c'
   },
   {
     date: 2022,
