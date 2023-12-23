@@ -1,6 +1,7 @@
 import React from 'react'
 import { TimelineItemIcon, TimelineItemIconProps } from './components/Icon'
 import ExternalIcon from './assets/external.svg?react'
+import { FavoritePens } from './components/FavoritePens'
 
 const ITEMS = [
   {
@@ -110,7 +111,7 @@ type TimelineItemProps = {
 
 const TimelineItem: React.FC<TimelineItemProps> = (props) => {
   return (
-    <div className="p-4 rounded-md bg-[#CBEC48] text-black w-[100%] min-h-[250px] flex flex-col gap-6 relative timeline-item">
+    <div className="p-4 rounded-md bg-[#CBEC48] text-black w-[100%] min-h-[250px] flex flex-col gap-6 relative timeline-item mb-10">
       <div className="bg-[#CBEC48] rounded-md left-0 -ml-[88px] py-1 px-2 text-xs font-bold absolute top-0 text-black">
         {props.date}
       </div>
@@ -143,17 +144,26 @@ function App() {
   const sortedItems = ITEMS.sort((a, b) => b.date - a.date)
 
   return (
-    <div className="min-h-screen w-full p-4 lg:grid gap-4 flex flex-col grid-cols-12">
-      <h1 className="intro-text font-bold">
+    <div className="min-h-screen w-full lg:grid gap-4 flex flex-col grid-cols-12 grid-rows-2">
+      <h1 className="col-start-2 col-span-3 font-bold row-start-1 py-10">
         Hello 👋🏽
         <br />
         My name is Nate and I code with React
         <br />
         👾
+        <br />
+        <a href="https://github.com/netanelben" target="_blank">
+          🐙 Github
+        </a>
       </h1>
-      {sortedItems.map((item, key) => (
-        <TimelineItem key={key} {...item} />
-      ))}
+      <div className="flex flex-col gap-2 col-start-2 col-span-4 row-start-2">
+        <FavoritePens />
+      </div>
+      <div className="w-full col-start-7 col-span-4 max-h-[150vh] overflow-y-auto row-[1/3]">
+        {sortedItems.map((item, key) => (
+          <TimelineItem key={key} {...item} />
+        ))}
+      </div>
     </div>
   )
 }

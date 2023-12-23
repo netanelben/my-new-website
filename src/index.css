@@ -76,10 +76,10 @@ button:focus-visible {
   grid-template-columns: repeat(12, 1fr);
 } */
 
-.intro-text {
+/* .intro-text {
   grid-column: 2 / span 3;
 }
 
 .timeline-item {
   grid-column: 6 / span 5;
-}
+} */
