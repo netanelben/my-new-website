@@ -83,3 +83,7 @@ button:focus-visible {
 .timeline-item {
   grid-column: 6 / span 5;
 } */
+
+.glowcyan {
+  box-shadow: 0px 0px 105px 45px rgba(45, 255, 196, 0.9);
+}

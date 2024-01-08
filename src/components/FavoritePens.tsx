@@ -4,11 +4,11 @@ const PENS = ['bGzXKJK', 'GRdJpvr']
 
 export const FavoritePens = () => (
   <div className="w-full">
-    <div className="font-bold text-xl">Favorite Pens.</div>
-    <div className="max-h-[450px] overflow-y-auto w-full flex flex-col gap-3">
+    <div className="font-bold text-xl text-center my-4">Latest Pens</div>
+    <div className="h-full w-full flex flex-col gap-6">
       {PENS.map((penId) => (
         <iframe
-          className="h-[300px] w-full shrink-0"
+          className="h-[270px] w-full shrink-0 my-3 rounded-xl"
           loading="lazy"
           height="300"
           title="Cookies Banner with Sound and Info Text"

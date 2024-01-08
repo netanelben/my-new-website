@@ -2,6 +2,7 @@ import React from 'react'
 import { TimelineItemIcon, TimelineItemIconProps } from './components/Icon'
 import ExternalIcon from './assets/external.svg?react'
 import { FavoritePens } from './components/FavoritePens'
+import { WhatsappContactButton } from './components/WhatsappContactButton'
 
 const ITEMS = [
   {
@@ -117,7 +118,9 @@ const TimelineItem: React.FC<TimelineItemProps> = (props) => {
       </div>
       <div className="flex flex-row justify-between items-center">
         <span className="flex items-center gap-2">
-          <span className="text-4xl font-heading">{props.title}</span>
+          <span className="text-2xl md:text-4xl font-heading">
+            {props.title}
+          </span>
           {props.link && (
             <a
               href={props.link}
@@ -132,9 +135,13 @@ const TimelineItem: React.FC<TimelineItemProps> = (props) => {
         </span>
         {props.icon && <TimelineItemIcon name={props.icon} />}
       </div>
-      <p className="font-typography text-md ">{props.content}</p>
+      <p className="font-typography text-base md:text-md">{props.content}</p>
       {props.imageSrc && (
-        <img src={props.imageSrc} alt={props.title} className="w-full h-full" />
+        <img
+          src={props.imageSrc}
+          alt={props.title}
+          className="w-full h-full rounded-md"
+        />
       )}
     </div>
   )
@@ -144,22 +151,26 @@ function App() {
   const sortedItems = ITEMS.sort((a, b) => b.date - a.date)
 
   return (
-    <div className="min-h-screen w-full lg:grid gap-4 flex flex-col grid-cols-12 grid-rows-2">
+    <div className="min-h-screen w-full lg:grid gap-4 flex flex-col grid-cols-12 grid-rows-2 px-1">
       <h1 className="col-start-2 col-span-3 font-bold row-start-1 py-10">
         Hello 👋🏽
         <br />
-        My name is Nate and I code with React
+        My name is Netanel, I am a web developer.
         <br />
-        👾
+        <span className="text-xl">Find here some of my projects →→→</span>
         <br />
-        <a href="https://github.com/netanelben" target="_blank">
-          🐙 Github
-        </a>
+        <br />
+        <div className="flex flex-row items-center justify-between md:items-start md:flex-col gap-3">
+          <a href="https://github.com/netanelben" target="_blank">
+            🐙 Github
+          </a>
+          <WhatsappContactButton />
+        </div>
       </h1>
-      <div className="flex flex-col gap-2 col-start-2 col-span-4 row-start-2">
+      <div className="col-start-2 col-span-4 row-start-2 glowcyan p-2 rounded-xl">
         <FavoritePens />
       </div>
-      <div className="w-full col-start-7 col-span-4 max-h-[150vh] overflow-y-auto row-[1/3]">
+      <div className="w-full col-start-7 col-span-4 max-h-[150vh] overflow-y-auto row-[1/3] py-2">
         {sortedItems.map((item, key) => (
           <TimelineItem key={key} {...item} />
         ))}
